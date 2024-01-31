@@ -10,13 +10,13 @@ function add(number, callback) {
 }
 
 // console.log(add(1));
-// add(1, function (error, result) {
-//     if (error) {
-//         console.log(error);
-//         return;
-//     }
-//     console.log(result);
-// });
+add(1, function (error, result) {
+    if (error) {
+        console.log(error);
+        return;
+    }
+    console.log(result);
+});
 // add(1,function(res){
 // add(res,function(res2){
 // add(res2,function(res3){
