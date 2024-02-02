@@ -1,0 +1,21 @@
+{
+  "name": "TopLearnpwanote",
+  "version": "1.0.0",
+  "description": "TopLearnpub PWA Course Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1",
+    "start:ssl": "http-server -c-1 -S -C cert.pem -K key.pem",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PWA",
+    "TopLearnPUB"
+  ],
+  "author": "Iman Madaeny",
+  "license": "TopLearn",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}
