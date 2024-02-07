@@ -1,6 +1,10 @@
-var helpers = (function() {
+if (!window.Promise) {
+  window.Promise = Promise;
+}
+
+var helpers = (function () {
   // get Query params
-  var getParameterByName = function(name, url) {
+  var getParameterByName = function (name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -11,7 +15,7 @@ var helpers = (function() {
   };
 
   // get Hash
-  var getHashByName = function(name) {
+  var getHashByName = function (name) {
     var hash = window.location.hash;
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[#&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -22,7 +26,7 @@ var helpers = (function() {
   };
 
   // Format date
-  var formatDate = function(date) {
+  var formatDate = function (date) {
     return (
       date.getUTCFullYear() +
       '/' +
@@ -39,7 +43,7 @@ var helpers = (function() {
   };
 
   // Show snackBarMessage
-  var showMessage = function(msg) {
+  var showMessage = function (msg) {
     var notification = document.querySelector('#notification');
     var data = {
       message: msg,
